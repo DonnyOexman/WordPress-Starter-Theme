@@ -1,0 +1,12 @@
+{
+  "name": "wp-starter-theme",
+  "version": "1.0.0",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "html5shiv": "~3.7.2",
+    "jQuery.Marquee": "~1.3.1",
+    "fontawesome": "~4.2.0",
+    "bxslider-4": "~4.1.2"
+  },
+  "private": true
+}

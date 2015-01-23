@@ -1,0 +1,32 @@
+{
+  "name": "wp-starter-theme",
+  "title": "WordPress Starter Theme",
+  "url": "http://www.donnyoexman.com/",
+  "homepage": "http://www.donnyoexman.com/",
+  "author": {
+    "name": "Donny Oexman",
+    "email": "donnyoexman@gmail.com",
+    "url": "http://www.donnyoexman.com/"
+  },
+  "copyright": "2015",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DonnyOexman/WordPress-Starter-Theme"
+  },
+  "bugs": {
+    "email": "donnyoexman@gmail.com"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-notify": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-watch": "latest",
+    "matchdep": "latest"
+  },
+  "private": true
+}
