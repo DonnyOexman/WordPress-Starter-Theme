@@ -2,8 +2,6 @@
 /**
  * The Header for our theme
  *
- * Displays all of the <head> section and everything up till <div class="content-container">
- *
  * @package WordPress
  * @subpackage WP Starter Theme
  * @since WP Starter Theme 1.0
@@ -58,31 +56,6 @@
                                         'container_class'   => 'primary-navigation',
                                         'fallback_cb'       => 'wpst_default_menu_fallback'
                                     ) );
-                                ?>
-
-                                <?php
-                                    $sites = wp_get_sites( array( 'public' => 1 ) );
-
-                                    if( ! empty( $sites ) ) :
-                                ?>
-                                    <div class="toggle">
-                                        <?php _e( 'Go to:', THEME_SLUG ); ?>
-
-                                        <?php
-                                            foreach( $sites as $site ) :
-                                                if( $site['blog_id'] == get_current_blog_id() ) {
-                                                    continue;
-                                                }
-
-                                                $site_details = get_blog_details( $site['blog_id'] );
-                                        ?>
-                                            <a href="<?php echo $site_details->siteurl; ?>"><?php echo $site_details->blogname; ?></a>
-                                        <?php
-                                            endforeach;
-                                        ?>
-                                    </div>
-                                <?php
-                                    endif;
                                 ?>
                             </header><!-- .header -->
                         </div><!-- .row -->
