@@ -9,14 +9,14 @@ class WPST {
     }
 
     function themeConstants() {
-        define( 'THEME_SLUG', get_template() );
-        define( 'THEME_DIR', get_template_directory() );
-        define( 'THEME_DIR_INCLUDES', get_template_directory() . '/includes' );
-        define( 'THEME_URI', get_template_directory_uri() );
-        define( 'THEME_URI_ASSETS', THEME_URI . '/assets' );
-        define( 'THEME_URI_JS', THEME_URI_ASSETS . '/js' );
+        define( 'THEME_SLUG',           get_template() );
+        define( 'THEME_DIR',            get_template_directory() );
+        define( 'THEME_DIR_INCLUDES',   get_template_directory() . '/includes' );
+        define( 'THEME_URI',            get_template_directory_uri() );
+        define( 'THEME_URI_ASSETS',     THEME_URI . '/assets' );
+        define( 'THEME_URI_JS',         THEME_URI_ASSETS . '/js' );
         define( 'THEME_URI_COMPONENTS', THEME_URI_ASSETS . '/components' );
-        define( 'THEME_URI_IMAGES', THEME_URI_ASSETS . '/images' );
+        define( 'THEME_URI_IMAGES',     THEME_URI_ASSETS . '/images' );
     }
 
     function themeIncludes() {
@@ -29,19 +29,11 @@ class WPST {
     }
 
     function themeActions() {
-        add_action( 'init', array( $this, 'themeInit' ) );
-
         add_action( 'after_setup_theme', array( $this, 'themeSetup' ) );
 
         add_action( 'wp_enqueue_scripts', array( $this, 'themeStylesAndScripts' ), 999 );
 
-        add_action( 'admin_enqueue_scripts', array( $this, 'themeAdminStylesAndScripts' ), 999 );
-
         add_action( 'widgets_init', array( $this, 'themeSidebars' ) );
-    }
-
-    function themeInit() {
-
     }
 
     /**
@@ -115,20 +107,14 @@ class WPST {
 
         wp_enqueue_script( 'bxslider-4', THEME_URI_COMPONENTS . '/bxslider-4/jquery.bxslider.min.js', array( 'jquery' ), false, true );
 
-        wp_enqueue_script( 'marquee', THEME_URI_COMPONENTS . '/jQuery.Marquee/jquery.marquee.min.js', array( 'jquery' ), false, true );
-
         wp_enqueue_script( 'app', THEME_URI_JS . '/app.min.js', array( 'jquery', 'foundation' ) , false, true );
-    }
-
-    function themeAdminStylesAndScripts() {
-
     }
 
     function themeSidebars() {
         register_sidebar( array(
             'name' => __( 'Primary Sidebar', THEME_SLUG ),
             'id' => 'sidebar-primary',
-            'description' => __( 'Wordt bijna overal op de website gebruikt.', THEME_SLUG ),
+            'description' => __( 'Used throughout the theme.', THEME_SLUG ),
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
             'before_title' => '<h2 class="widget-title">',
@@ -138,7 +124,7 @@ class WPST {
         register_sidebar( array(
             'name' => __( 'Footer Sidebar', THEME_SLUG ),
             'id' => 'sidebar-footer',
-            'description' => __( 'Wordt in de footer van de website gebruikt.', THEME_SLUG ),
+            'description' => __( 'Used in the footer of the theme.', THEME_SLUG ),
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
             'before_title' => '<h2 class="widget-title">',
