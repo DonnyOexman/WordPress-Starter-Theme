@@ -9,7 +9,7 @@
 
 ## Requirements
 
-**You'll need to have the following items installed before continuing.** NOTE: You only have to this once. If you already have all of this, please continue to 'Quick Start'.
+**You'll need to have the following items installed before continuing.** NOTE: You only have to this once. If you already have all of this, please continue to 'Installation'.
 
   * [SourceTree](http://sourcetreeapp.com/) or [GIT](http://git-scm.com/downloads/): Use the installer provided on the SourceTree or GIT website.
   * [Composer](https://getcomposer.org/): Use the installer provided on the Composer website. **(Install GLOBALLY)**
