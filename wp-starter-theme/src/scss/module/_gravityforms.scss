@@ -1,0 +1,16 @@
+.gform_heading,
+.validation_error, .validation_message {
+    margin-bottom: $column-gutter / 2;
+}
+
+.validation_error, .validation_message {
+    font-weight: bold;
+    color: $orange;
+}
+
+.gform_fields {
+    margin: 0;
+    li {
+        list-style: none;
+    }
+}

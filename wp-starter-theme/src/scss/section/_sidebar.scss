@@ -1,0 +1,81 @@
+/**
+ * Sidebar
+ * ----------------------------------------------------------------------------
+ */
+
+.secondary-content {
+    margin-top: $column-gutter / 2;
+    @include grid-column(12);
+    .widget {
+        margin-top: $column-gutter / 2;
+        background-color: #FFFFFF;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .widget_testimonials_widget,
+    .widget_content_block_widget {
+        padding: rem-calc(30) rem-calc(30) rem-calc(35) rem-calc(40);
+        border-top: rem-calc(5) solid $orange;
+    }
+    .widget-title {
+        margin: 0 0 rem-calc(25);
+        text-align: right;
+        color: $orange;
+    }
+}
+
+.widget_search {
+    .search-form {
+        max-width: none;
+    }
+}
+
+.widget_testimonials_widget {
+    p {
+        font-size: rem-calc(11);
+    }
+    .testimonials {
+        position: relative;
+        margin: rem-calc(25) 0 0;
+        list-style: none;
+    }
+    .quote {
+        position: relative;
+        margin: 0 rem-calc(10) rem-calc(20) 0;
+        padding-left: rem-calc(25);
+        &:before {
+            position: absolute;
+            top: rem-calc(-2);
+            left: 0;
+            font-family: FontAwesome;
+            font-size: rem-calc(16);
+            color: $lightergreen;
+            line-height: 1;
+            content: '\f10d';
+        }
+    }
+    .client-name {
+        text-align: right;
+        font-weight: bold;
+        color: $orange;
+    }
+}
+
+.widget_facebook-like-box {
+    .fb_iframe_widget {
+        width: 100% !important;
+        @include pie-clearfix;
+        span,
+        iframe {
+            width: 100% !important;
+        }
+    }
+}
+
+@media #{$medium-up} {
+    .secondary-content {
+        margin-top: 0;
+        @include grid-column(4);
+    }
+}

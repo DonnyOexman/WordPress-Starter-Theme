@@ -1,0 +1,92 @@
+/**
+ * Global elements like h1, a, p, input, etc.
+ * Or globally used throughout the website.
+ * ----------------------------------------------------------------------------
+ */
+
+html {
+    background: $body-bg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+p {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    @include transition(all 0.5s ease);
+}
+
+input, textarea {
+    @include custom-placeholder($gray);
+}
+
+input {
+    &[type="submit"] {
+        @include button($padding: $button-tny, $is-input: true);
+        text-transform: uppercase;
+    }
+}
+
+.row {
+    margin-top: $column-gutter / 2;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.post-edit-link {
+    @include button($button-tny);
+    text-transform: uppercase;
+}
+
+.search-form {
+    position: relative;
+    margin-bottom: 0;
+    max-width: rem-calc(300);
+    > .search-field {
+        margin-bottom: 0;
+        padding-right: rem-calc(38);
+    }
+    > .search-submit {
+        position: absolute;
+        top: rem-calc(3);
+        right: rem-calc(3);
+        padding: 0;
+        width: rem-calc(28);
+        height: rem-calc(28);
+    }
+}
+
+.off-canvas-list {
+    .sub-menu {
+        margin: 0;
+        padding: 0;
+        a {
+            padding: {
+                right: rem-calc(20);
+                left: rem-calc(20);
+            };
+        }
+    }
+    li {
+        list-style: none;
+    }
+}
+
+@media #{$small-only} {
+    #wpadminbar {
+        position: fixed !important;
+    }
+}
+
+@media #{$medium-up} {
+    .row {
+        margin-top: $column-gutter;
+    }
+}
